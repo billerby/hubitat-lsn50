@@ -3,7 +3,7 @@ import java.text.SimpleDateFormat
  *  Current temperature
  *
  *  Summary:
- *  Retrieve current temperature and humidity and battery level data from a LSN50
+ *  Retrieve current temperature and battery level data from a LSN50
  *  (https://www.dragino.com/products/lora-lorawan-end-node/item/168-lsn50v2-d20.html)
  *
  *  registered at thethingsnetwork.com lorawan network
@@ -163,7 +163,7 @@ def poll()  {
         sendEvent(name: "error", value: "Connection timed out while retrieving data from API", displayed: true)
     }
     catch (e) {
-        log.error ("Could not retrieve temperature and humidity data:", e)
+        log.error ("Could not retrieve temperature data:", e)
         sendEvent(name: "error", value: "Could not retrieve data from API", displayed: true)
     }
 }
